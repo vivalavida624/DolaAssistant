@@ -119,7 +119,7 @@ function renderList(records) {
       <a class="record-item" href="detail.html?id=${encodeURIComponent(r.id)}">
         <div>${r.date}</div>
         <div>${r.location}</div>
-        <div>¥ ${r.amount}</div>
+        <div>CAD$ ${r.amount}</div>
         <div>${r.note || "-"}</div>
         <div><span class="badge ${r.hasImage ? "" : "off"}">${r.hasImage ? "有" : "无"}</span></div>
       </a>
@@ -162,7 +162,7 @@ function renderDetail(record) {
 
   container.innerHTML = `
     <h2>${record.location} - ${record.date}</h2>
-    <p><strong>金额：</strong>¥ ${record.amount}</p>
+    <p><strong>金额：</strong>CAD$ ${record.amount}</p>
     <p><strong>备注：</strong>${record.note || "-"}</p>
     <div class="detail-grid">
       <div>
