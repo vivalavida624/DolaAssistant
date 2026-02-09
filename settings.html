@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>记账应用 - 配置</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body data-page="settings">
+    <header class="app-header">
+      <div>
+        <h1>应用配置</h1>
+        <p>姓名与头像</p>
+      </div>
+      <a class="link-btn" href="index.html">返回列表</a>
+    </header>
+
+    <main class="container">
+      <section class="panel">
+        <h2>个人信息</h2>
+        <form id="settingsForm" class="settings-form">
+          <label>
+            姓名
+            <input id="nameInput" name="name" type="text" required />
+          </label>
+          <label>
+            头像 URL
+            <input id="avatarInput" name="avatar" type="url" placeholder="https://example.com/avatar.png" />
+          </label>
+          <div class="preview">
+            <span>头像预览</span>
+            <img id="avatarPreview" alt="头像预览" />
+          </div>
+          <div class="actions">
+            <button type="submit">保存到浏览器</button>
+            <button type="button" id="exportBtn">导出 settings.md</button>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
